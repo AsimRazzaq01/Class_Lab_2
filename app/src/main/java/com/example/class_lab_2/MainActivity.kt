@@ -26,7 +26,7 @@ class MainActivity : ComponentActivity() {
 
         var Hi = "Hello Android user !"
 
-        message(Hi)
+//        message(Hi)
 
 //        val afm : (String) -> Unit = {m:String ->
 //            println("Message: ")
@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
         }
 
         val newSal = calcSalary(100.0, .1)
-        println("New Salary = $newSal")
+        println("First Salary Raise = $newSal")
 
         fun useOtherFunction(z: (String) -> Unit){
             z("Android Sucks")
@@ -55,6 +55,8 @@ class MainActivity : ComponentActivity() {
         }
 
         useFunctionRefParm(calcSalary)
+
+
 
         
 
