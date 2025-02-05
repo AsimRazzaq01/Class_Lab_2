@@ -48,8 +48,10 @@ class MainActivity : ComponentActivity() {
         useOtherFunction(::message)
 
         fun useFunctionRefParm(y: (Double, Double) -> Double){
-            val sal = y(100.0, .2)
-            println("NEW SALARY: " + sal)
+            val raise = .2
+            val salary = 100.0
+            val NewSalary = y(salary, raise)
+            println("NEW SALARY: " + NewSalary)
         }
 
         useFunctionRefParm(calcSalary)
