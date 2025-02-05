@@ -57,9 +57,13 @@ class MainActivity : ComponentActivity() {
         useFunctionRefParm(calcSalary)
 
 
-        SalaryList().show()
+//        SalaryList().show()
 
-        SalaryList().showWithRaise(calcSalary)
+//        SalaryList().showWithRaise(calcSalary)
+
+        SalaryList(calcSalary).showWithRaise()
+
+
 
         
 

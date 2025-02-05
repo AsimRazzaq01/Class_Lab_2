@@ -2,7 +2,7 @@ package com.example.class_lab_2
 
 import android.util.Log
 
-class SalaryList {
+class SalaryList(funRef: (Double,Double) -> Double) {
 
     val salaries: List<Double>
 
@@ -17,12 +17,22 @@ class SalaryList {
     }
 
 
-    fun showWithRaise(funRef: (Double,Double) -> Double){
+//    fun showWithRaise(funRef: (Double,Double) -> Double){
+//        var raisePct = .1
+//        for (sal in salaries){
+//            val newSalary = funRef(sal, raisePct)
+//            println("New Salary: $newSalary")
+//        }
+//    }
+
+
+    fun showWithRaise(){
         var raisePct = .1
         for (sal in salaries){
-            val newSalary = funRef(sal, raisePct)
+            val newSalary = (sal +(sal * raisePct))
             println("New Salary: $newSalary")
         }
     }
+
 
 }
